@@ -18,6 +18,7 @@
     --primary-light: hsl(158, 83%, 32%);
 }
 html {
+    height: 100%;
     scroll-behavior: smooth;
     scrollbar-color: var(--primary-light) var(--white-dark);
     scrollbar-width: thin;
@@ -27,14 +28,18 @@ html {
     box-sizing: border-box;
 }
 body {
-    /* border: 3px solid palevioletred; */
     height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    min-height: 100vh;
     width: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
 }
 
 #rubik {
@@ -47,7 +52,6 @@ body {
 }
 
 main {
-    /* border: 3px dotted red; */
     height: 100%;
     width: min(100%, 800px);
     padding: 80px 0;
@@ -67,7 +71,6 @@ main {
 }
 
 #image-wrapper {
-    /* border: 3px dotted green; */
     min-height: 0;
     height: fit-content;
     max-width: 100%;
