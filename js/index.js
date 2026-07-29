@@ -64,6 +64,15 @@ function loadSummary() {
 }
 
 const guessInput = document.getElementById("guess");
+
+function scrollInputIntoView() {
+    setTimeout(() => {
+        guessInput.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 250);
+}
+
+guessInput.addEventListener("focus", scrollInputIntoView);
+guessInput.addEventListener("click", scrollInputIntoView);
 guessInput.addEventListener("input", () => {
     let val = guessInput.value.replace(/,/g, ""); // Remove existing commas
     val = val.replace(/\D/g, ""); // Only allow digits
