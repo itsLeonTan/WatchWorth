@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/watchworth.css">
+    <link rel="icon" type="image/x-icon" href="src/auction.png">
+    <script src="js/watchworth.js" defer></script>
+
+    <title>WatchWorth</title>
+</head>
+<body>
+    <a id="rubik" href="https://itsleontan.com">
+        <img src="src/rubik.png" alt="Rubik's Cube">
+    </a>
+
+    <main>
+        <h2 id="rounds">5 Rounds</h2>
+        <h2 id="name">Guess the auction price.</h2>
+        
+        <div id="image-wrapper">
+            <img id="image" src="src/watches/Mystery watch.png" alt="watch">
+            <p id="actualPrice">$1,000,000</p>
+        </div>
+
+        <p id="date-sold">And earn points!</p>
+
+        <button id="start">Start</button>
+
+        <div id="input-container">
+            <span>USD$</span>
+            <input id="guess" placeholder=""><button><img src="src/auction.png"></button>
+        </div>
+
+        <div id="round-summary">
+            <p id="roundPoints"></p>
+            <button id="next">Next</button>
+        </div>
+
+        <div id="game-summary">
+            <p id="gamePoints"></p>
+            <button id="again">Play Again</button>
+        </div>
+    </main>
+</body>
+</html>

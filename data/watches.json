@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "name": "F.P. Journe Chronomètre Bleu",
+        "price": 179200,
+        "image": "src/watches/F.P. Journe Chronomètre Bleu.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/materiality-ad2605/chronometre-bleu-a-tantalum-wristwatch-circa-2017?locale=en",
+        "dateSold": "July 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 2,
+        "name": "Day-Date, Reference 18208",
+        "price": 153600,
+        "image": "src/watches/Day-Date, Reference 18208.png",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/materiality-ad2605/day-date-reference-18208-a-yellow-gold-wristwatch?locale=en",
+        "dateSold": "July 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 3,
+        "name": "Rolex Air-King, Reference 126900",
+        "price": 8960,
+        "image": "src/watches/Rolex Air-King, Reference 126900.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-126900-air-king-a-stainless-steel?locale=en",
+        "dateSold": "July 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 4,
+        "name": "Rolex Explorer II, Reference 216570",
+        "price": 8960,
+        "image": "src/watches/Rolex Explorer II, Reference 216570.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-216570-explorer-ii-a-stainless-steel-2",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 5,
+        "name": "Rolex GMT-Master II 'Pepsi', Reference 116719BLRO",
+        "price": 35840,
+        "image": "src/watches/GMT-Master II 'Pepsi'.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-116719blro-gmt-master-ii-pepsi-a-white",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 6,
+        "name": "Rolex Daytona, Reference 126506",
+        "price": 102400,
+        "image": "src/watches/Rolex Daytona Reference 126506.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-126506-daytona-a-platinum-automatic",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 7,
+        "name": "A. Lange & Söhne Lange 1 Daymatic, Reference 320.025",
+        "price": 40960,
+        "image": "src/watches/A. Lange & Söhne Lange 1 Daymatic, Reference 320.025.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-320-025-lange-1-daymatic-a-platinum",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 8,
+        "name": "Rolex 'Big Red' Daytona, Reference 6263",
+        "price": 102400,
+        "image": "src/watches/Rolex 'Big Red' Daytona, Reference 6263.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-6263-big-red-daytona-a-stainless-steel",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 9,
+        "name": "Cartier Santos, Reference WSSA0030",
+        "price": 8320,
+        "image": "src/watches/Cartier Santos, Reference WSSA0030.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-wssa0030-santos-a-stainless-steel",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 10,
+        "name": "Breguet Classique, Reference 5140",
+        "price": 8960,
+        "image": "src/watches/Breguet Classique, Reference 5140.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-5140-classique-a-white-gold-automatic",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 11,
+        "name": "Rolex Milgauss, Reference 116400",
+        "price": 17920,
+        "image": "src/watches/Rolex Milgauss, Reference 116400.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-116400-milgauss-a-stainless-steel",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    }
+]
