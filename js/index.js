@@ -20,9 +20,9 @@ async function loadWatches() {
     } catch (error) {
         console.error("Failed to load watch data:", error);
     }
+    shuffle(watches);
 }
 loadWatches();
-shuffle(watches);
 
 async function loadRandomWatch() {
     if (watches.length == 0) await loadWatches();
@@ -44,6 +44,7 @@ function roundSummary() {
     let price = randomWatch.price;
     let guess = document.getElementById("guess").value;
     guess = parseInt(guess.replace(/[$,]/g, ""), 10);
+    if (Number.isNaN(guess)) guess = 0;
 
     let roundPoints = 0;
     let percentageError = 1 - Math.abs((price - guess) / price);
