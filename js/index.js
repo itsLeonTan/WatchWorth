@@ -43,13 +43,28 @@ function calculatePoints() {
     if (!(percentageError < 0)) roundPoints += Math.round(1000 * percentageError);
     p += roundPoints;
 
+    document.getElementById("sold").classList.add("show");
+
     document.getElementById("roundPoints").textContent = "+" + roundPoints + " Points";
 
     let actualPrice = document.getElementById("actualPrice");
-    actualPrice.textContent = "$" + randomWatch.price.toLocaleString("en-US");
     actualPrice.style.display = "block";
 
-    document.getElementById("sold").classList.add("show");
+    const duration = 1000;
+    const start = 0;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        const currentValue = Math.floor(randomWatch.price * progress);
+        actualPrice.textContent = "$" + currentValue.toLocaleString("en-US");
+
+        if (progress < 1) requestAnimationFrame(update);
+        else actualPrice.textContent = "$" + randomWatch.price.toLocaleString("en-US");
+    }
+    requestAnimationFrame(update);
 }
 
 function loadSummary() {
