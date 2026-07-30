@@ -9,12 +9,10 @@ let r = 1; // rounds
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
 }
-
 async function loadWatches() {
     try {
         const response = await fetch("data/watches.json");
@@ -22,23 +20,23 @@ async function loadWatches() {
     } catch (error) {
         console.error("Failed to load watch data:", error);
     }
-    shuffle(watches);
 }
 loadWatches();
+shuffle(watches);
 
 async function loadRandomWatch() {
     if (watches.length == 0) await loadWatches();
 
     randomWatch = watches[r - 1];
-    document.getElementById("name").textContent = randomWatch.name;
     document.getElementById("image").src = randomWatch.image;
+    document.getElementById("name").textContent = randomWatch.name;
     document.getElementById("date-sold").textContent = "Sold: " + randomWatch.dateSold;
 }
 
 function roundSummary() {
     let price = randomWatch.price;
     let guess = document.getElementById("guess").value;
-    guess = parseInt(guess.replace(/,/g, ""), 10);
+    guess = parseInt(guess.replace(/[$,]/g, ""), 10);
 
     let roundPoints = 0;
     let percentageError = 1 - Math.abs((price - guess) / price);
@@ -87,9 +85,9 @@ function gameSummary() {
 const guessInput = document.getElementById("guess");
 
 guessInput.addEventListener("input", () => {
-    let val = guessInput.value.replace(/,/g, ""); // Remove existing commas
+    let val = guessInput.value.replace(/$,/g, ""); // Remove existing commas
     val = val.replace(/\D/g, ""); // Only allow digits
-    guessInput.value = Number(val).toLocaleString("en-US"); // Add commas
+    guessInput.value = "$" + Number(val).toLocaleString("en-US"); // Add commas
 });
 document.getElementById("start").addEventListener("click", () => {
     document.getElementById("rounds").textContent = "Round " + r + " of 5";
@@ -101,7 +99,8 @@ document.querySelector("#input-container button").addEventListener("click", () =
     roundSummary();
     document.getElementById("input-container").style.display = "none";
     document.getElementById("round-summary").style.display = "flex";
-    document.getElementById("guess").value = 0;
+    document.getElementById("guess").value = "";
+    document.getElementById("guess").placeholder = "$0";
 });
 document.getElementById("next").addEventListener("click", () => {
     document.getElementById("sold").classList.remove("show");
