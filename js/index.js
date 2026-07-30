@@ -45,12 +45,15 @@ function calculatePoints() {
 
     document.getElementById("roundPoints").textContent = "+" + roundPoints + " Points";
 
-    document.getElementById("actualPrice").textContent = "$" + randomWatch.price.toLocaleString("en-US");
-    document.getElementById("actualPrice").style.display = "block";
+    let actualPrice = document.getElementById("actualPrice");
+    actualPrice.textContent = "$" + randomWatch.price.toLocaleString("en-US");
+    actualPrice.style.display = "block";
+
+    document.getElementById("sold").classList.add("show");
 }
 
 function loadSummary() {
-    document.getElementById("start").style.display = "none"; // temp; unnecessary
+    document.getElementById("start").style.display = "none"; // unnecessary
     document.getElementById("rounds").style.display = "none";
     document.getElementById("image-wrapper").style.display = "none";
     document.getElementById("date-sold").style.display = "none";
@@ -83,6 +86,7 @@ document.querySelector("#input-container button").addEventListener("click", () =
     document.getElementById("guess").value = 0;
 });
 document.getElementById("next").addEventListener("click", () => {
+    document.getElementById("sold").classList.remove("show");
     document.getElementById("actualPrice").style.display = "none";
     r++;
     if (r == 6) loadSummary();
