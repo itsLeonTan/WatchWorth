@@ -1,3 +1,5 @@
+document.documentElement.style.setProperty("--app-height", `${window.innerHeight}px`);
+
 let watches = [];
 let randomWatch;
 let p = 0; // points
