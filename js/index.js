@@ -28,7 +28,14 @@ async function loadRandomWatch() {
     if (watches.length == 0) await loadWatches();
 
     randomWatch = watches[r - 1];
-    document.getElementById("image").src = randomWatch.image;
+    // document.getElementById("image").src = randomWatch.image;
+    const img = document.getElementById("image");
+    await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = randomWatch.image;
+    });
+
     document.getElementById("name").textContent = randomWatch.name;
     document.getElementById("date-sold").textContent = "Sold: " + randomWatch.dateSold;
 }
@@ -102,16 +109,16 @@ document.querySelector("#input-container button").addEventListener("click", () =
     document.getElementById("guess").value = "";
     document.getElementById("guess").placeholder = "$0";
 });
-document.getElementById("next").addEventListener("click", () => {
+document.getElementById("next").addEventListener("click", async () => {
     document.getElementById("sold").classList.remove("show");
     document.getElementById("actualPrice").style.display = "none";
     r++;
     if (r == 6) gameSummary();
     else {
+        await loadRandomWatch();
         document.getElementById("round-summary").style.display = "none";
         document.getElementById("rounds").textContent = "Round " + r + " of 5";
         document.getElementById("input-container").style.display = "flex";
-        loadRandomWatch();
     }
 })
 document.getElementById("again").addEventListener("click", () => {
