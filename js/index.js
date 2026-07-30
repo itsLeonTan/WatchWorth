@@ -33,24 +33,21 @@ async function loadRandomWatch() {
     document.getElementById("date-sold").textContent = "Sold: " + randomWatch.dateSold;
 }
 
-function calculatePoints() {
+function roundSummary() {
     let price = randomWatch.price;
     let guess = document.getElementById("guess").value;
     guess = parseInt(guess.replace(/,/g, ""), 10);
 
-    let percentageError = 1 - Math.abs((price - guess) / price);
     let roundPoints = 0;
+    let percentageError = 1 - Math.abs((price - guess) / price);
     if (!(percentageError < 0)) roundPoints += Math.round(1000 * percentageError);
     p += roundPoints;
 
-    document.getElementById("sold").classList.add("show");
-
-    document.getElementById("roundPoints").textContent = "+" + roundPoints + " Points";
-
+    document.getElementById("roundPoints").textContent = "";
     let actualPrice = document.getElementById("actualPrice");
     actualPrice.style.display = "block";
 
-    const duration = 1000;
+    const duration = 800;
     const start = 0;
     const startTime = performance.now();
 
@@ -62,12 +59,16 @@ function calculatePoints() {
         actualPrice.textContent = "$" + currentValue.toLocaleString("en-US");
 
         if (progress < 1) requestAnimationFrame(update);
-        else actualPrice.textContent = "$" + randomWatch.price.toLocaleString("en-US");
+        else {
+            actualPrice.textContent = "$" + randomWatch.price.toLocaleString("en-US");
+            document.getElementById("sold").classList.add("show");
+            document.getElementById("roundPoints").textContent = "+" + roundPoints + " Points";
+        }
     }
     requestAnimationFrame(update);
 }
 
-function loadSummary() {
+function gameSummary() {
     document.getElementById("start").style.display = "none"; // unnecessary
     document.getElementById("rounds").style.display = "none";
     document.getElementById("image-wrapper").style.display = "none";
@@ -95,7 +96,7 @@ document.getElementById("start").addEventListener("click", () => {
     loadRandomWatch();
 });
 document.querySelector("#input-container button").addEventListener("click", () => {
-    calculatePoints();
+    roundSummary();
     document.getElementById("input-container").style.display = "none";
     document.getElementById("round-summary").style.display = "flex";
     document.getElementById("guess").value = 0;
@@ -104,7 +105,7 @@ document.getElementById("next").addEventListener("click", () => {
     document.getElementById("sold").classList.remove("show");
     document.getElementById("actualPrice").style.display = "none";
     r++;
-    if (r == 6) loadSummary();
+    if (r == 6) gameSummary();
     else {
         document.getElementById("round-summary").style.display = "none";
         document.getElementById("rounds").textContent = "Round " + r + " of 5";

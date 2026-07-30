@@ -10,9 +10,9 @@
     },
     {
         "id": 2,
-        "name": "Day-Date, Reference 18208",
+        "name": "Rolex Day-Date, Reference 18208",
         "price": 153600,
-        "image": "src/watches/Day-Date, Reference 18208.png",
+        "image": "src/watches/Rolex Day-Date, Reference 18208.png",
         "source": "https://www.sothebys.com/en/buy/auction/2026/materiality-ad2605/day-date-reference-18208-a-yellow-gold-wristwatch?locale=en",
         "dateSold": "July 2026",
         "auction-house": "Sotheby's"
@@ -96,6 +96,78 @@
         "image": "src/watches/Rolex Milgauss, Reference 116400.jpg",
         "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-116400-milgauss-a-stainless-steel",
         "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 12,
+        "name": "Omega Seamaster Planet Ocean, Reference 232.30.42.21.01.001",
+        "price": 5760,
+        "image": "src/watches/Omega Seamaster Planet Ocean, Reference 232.30.42.21.01.001.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-232-30-42-21-01-001-seamaster-planet",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 13,
+        "name": "Panerai Radiomir California 8 Giorni, Reference PAM01349",
+        "price": 8960,
+        "image": "src/watches/Panerai Radiomir California 8 Giorni, Reference PAM01349.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/fine-watches/reference-pam01349-radiomir-california-8-giorni-a",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 14,
+        "name": "Patek Philippe Aquanaut, Reference 5167A-001",
+        "price": 61440,
+        "image": "src/watches/Patek Philippe Aquanaut, Reference 5167A-001.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/important-watches/reference-5167a-001-aquanaut-an-early-stainless?locale=en",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 15,
+        "name": "Patek Philippe Nautilus, Reference 5711/1A-011",
+        "price": 102400,
+        "image": "src/watches/Patek Philippe Nautilus, Reference 5711:1A-011.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/important-watches/reference-5711-1a-011-nautilus-a-stainless-steel?locale=en",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 16,
+        "name": "Cartier 'NSO' Crash, Reference WGCH0018",
+        "price": 409600,
+        "image": "src/watches/Cartier 'NSO' Crash, Reference WGCH0018.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/important-watches/reference-wgch0018-nso-crash-a-special-order?locale=en",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 17,
+        "name": "Cartier Cloche 'Cartier Privé', Reference WGCC0004",
+        "price": 51200,
+        "image": "src/watches/Cartier Cloche 'Cartier Privé', Reference WGCC0004.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/important-watches/reference-wgcc0004-cloche-cpcp-a-limited-edition?locale=en",
+        "dateSold": "June 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 18,
+        "name": "H. Moser & Cie Endeavour Centre Seconds Concept 'Lime Green', Reference 1200-1233",
+        "price": 23530,
+        "image": "src/watches/H. Moser & Cie Endeavour Centre Seconds Concept 'Lime Green', Reference 1200-1233.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/important-watches-ge2601/endeavour-centre-seconds-concept-lime-green?locale=en",
+        "dateSold": "May 2026",
+        "auction-house": "Sotheby's"
+    },
+    {
+        "id": 19,
+        "name": "Audemars Piguet Royal Oak, Reference 15400ST",
+        "price": 37650,
+        "image": "src/watches/Audemars Piguet Royal Oak, Reference 15400ST.jpg",
+        "source": "https://www.sothebys.com/en/buy/auction/2026/important-watches-ge2601/royal-oak-reference-15400st-a-stainless-steel?locale=en",
+        "dateSold": "May 2026",
         "auction-house": "Sotheby's"
     }
 ]
